@@ -5,15 +5,15 @@ import Header from '../header/Header';
 
 function Layout({children}: {children: React.ReactNode}) {
   return (
-    <>
+    <div>
       <Header>
         <Navbar />
       </Header>
-      <main>
+      <div>
         {children}
-      </main>
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
