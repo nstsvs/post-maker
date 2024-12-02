@@ -1,10 +1,7 @@
 import React from 'react';
-import Layout from '../../components/layout/Layout';
 
-function ProductList() {
+export const ProductList = () => {
   return (
-    <Layout>Product List</Layout>
+    <div>Список товаров</div>
   )
 }
-
-export default ProductList;

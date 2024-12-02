@@ -1,10 +1,7 @@
 import React from 'react';
-import Layout from '../../components/layout/Layout';
 
-function Cart() {
+export const Cart = () => {
   return (
-    <Layout>Cart</Layout>
+    <div>Корзина пуста</div>
   )
 }
-
-export default Cart;

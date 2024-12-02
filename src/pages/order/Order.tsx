@@ -1,10 +1,7 @@
 import React from 'react';
-import Layout from '../../components/layout/Layout';
 
-function Order() {
+export const Order = () => {
   return (
-    <Layout>Order</Layout>
+    <div>Ваш заказ</div>
   )
 }
-
-export default Order;

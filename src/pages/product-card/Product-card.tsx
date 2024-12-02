@@ -1,10 +1,7 @@
 import React from 'react';
-import Layout from '../../components/layout/Layout';
 
-function ProductCard() {
+export const ProductCard = () => {
   return (
-    <Layout>ProductCard</Layout>
+    <div>Карточка товара</div>
   )
 }
-
-export default ProductCard;
