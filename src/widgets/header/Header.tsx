@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import Logo from '@/shared/assets/images/logo/logo.svg'
+import Logo from '../../shared/assets/images/logo/logo.svg'
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 

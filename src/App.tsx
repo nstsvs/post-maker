@@ -4,8 +4,8 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { Cart, NotFound, Order, ProductCard, ProductList } from '@/pages';
-import { Header, Footer } from '@/widgets';
+import { Cart, NotFound, Order, ProductCard, ProductList } from './pages';
+import { Header, Footer } from './widgets';
 
 function App() {
   return (
