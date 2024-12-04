@@ -1,5 +1,3 @@
-export * from './cart';
 export * from './not-found';
-export * from './order';
-export * from './product-card';
-export * from './products-list';
+export * from './post-page';
+export * from './post-list';

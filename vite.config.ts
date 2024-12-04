@@ -20,11 +20,13 @@ export default defineConfig({
     }),
     react()
   ],
-  alias: {
-    '@': path.resolve(__dirname, './src'),
-    '@widgets': path.resolve(__dirname, './src/widgets'),
-    '@shared': path.resolve(__dirname, './src/shared'),
-    '@pages': path.resolve(__dirname, './src/pages'),
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      // '@widgets': path.resolve(__dirname, './src/widgets'),
+      // '@shared': path.resolve(__dirname, './src/shared'),
+      // '@pages': path.resolve(__dirname, './src/pages'),
+    },
   },
   server: {
     open: true,

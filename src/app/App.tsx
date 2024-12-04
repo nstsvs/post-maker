@@ -4,8 +4,8 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { Cart, NotFound, Order, ProductCard, ProductList } from './pages';
-import { Header, Footer } from './widgets';
+import { NotFound, PostList, PostPage } from '../pages';
+import { Header, Footer } from '../widgets';
 
 function App() {
   return (
@@ -13,10 +13,8 @@ function App() {
       <div className='app-container'>
         <Header />
         <Routes>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/product-list" element={<ProductList />} />
-          <Route path="/product-card" element={<ProductCard />} />
-          <Route path="/order" element={<Order />} />
+          <Route path="/post-list" element={<PostList />} />
+          <Route path="/post-page" element={<PostPage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
