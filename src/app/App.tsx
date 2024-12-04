@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/post-list" element={<PostList />} />
-          <Route path="/post-page" element={<PostPage />} />
+          <Route path="/post-page:id" element={<PostPage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
