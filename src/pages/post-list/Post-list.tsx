@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import api from '../../shared/api/baseUrl'
+import api from '../../shared/api/baseUrl';
+import './post-list.css';
 
 export const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -21,15 +22,15 @@ export const PostList = () => {
   }, [])
 
   if (posts.length === 0) {
-    return <div>Posts are loading, please wait...</div>;
+    return <div className='post-list__warning'>Posts are loading, please wait...</div>;
   }
 
   return (
-    <ul>
+    <ul className="post-list">
       {posts.map((post) => (
-        <li key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
+        <li className='post-item' key={post.id}>
+          <h2 className='post-item__title'>{post.title}</h2>
+          <p className='post-item__desc'>{post.body}</p>
         </li>
       ))}
     </ul>
