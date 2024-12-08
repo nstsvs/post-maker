@@ -14,12 +14,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@pages/*": ["./src/pages/*"],
-      "@widgets/*": ["./src/widgets/*"],
-      "@shared/*": ["./src/shared/*"]
+      "@pages/*": ["pages/*"],
+      "@widgets/*": ["widgets/*"],
+      "@shared/*": ["shared/*"]
     }
   },
   "include": [

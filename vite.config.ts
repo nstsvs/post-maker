@@ -6,6 +6,7 @@ import * as path from 'node:path';
 export default defineConfig({
   root: 'src',
   build: {
+    // ???
     outDir: '../dist',
   },
   plugins: [
@@ -23,9 +24,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      // '@widgets': path.resolve(__dirname, './src/widgets'),
-      // '@shared': path.resolve(__dirname, './src/shared'),
-      // '@pages': path.resolve(__dirname, './src/pages'),
+      '@widgets': path.resolve(__dirname, './src/widgets'),
+      '@shared': path.resolve(__dirname, './src/shared'),
+      '@pages': path.resolve(__dirname, './src/pages'),
     },
   },
   server: {
