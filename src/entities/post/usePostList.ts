@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { IPost } from '@/entities/post/types';
-import api from '@shared/api/baseUrl';
+import { IPost } from '../post/types';
+import api from '../post/api/baseUrl';
 
 export const usePostList = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
