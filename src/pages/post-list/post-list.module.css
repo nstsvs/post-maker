@@ -1,25 +1,30 @@
-.post-list {
+.list {
     margin: 20px 0 20px 0;
     padding: 0 40px;
 }
 
-.post-item {
+.item {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.post-item:not(:last-child) {
+.item:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.post-item__title {
+.title {
     margin-bottom: 10px;
 }
 
-.post-list__warning {
+.warning {
     font-size: 30px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }
