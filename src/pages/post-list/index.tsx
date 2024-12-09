@@ -9,7 +9,7 @@ export const PostList = () => {
   return (
     <>
       {hasError && <p className={styles.warning}>Something went wrong</p>}
-      {isLoading ? <p className={styles.warning}>Posts are loading, please wait...</p> :
+      {isLoading ? <div className={styles.loader}></div> :
         <ul className={styles.list}>
           {posts.map(({ id, title, body }) => (
             <li className={styles.item} key={id}>
