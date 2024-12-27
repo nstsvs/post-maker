@@ -1,6 +1,5 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { NotFound, PostList, PostPage } from './pages';
-import { LoginPage } from '@pages/login';
+import { NotFound, PostList, PostPage, SignUpPage, LoginPage } from './pages';
 import { Layout } from '@widgets/Layout';
 
 export const router = createBrowserRouter([
@@ -24,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: 'login',
         element: <LoginPage />,
+      },
+      {
+        path: 'signup',
+        element: <SignUpPage />,
       },
       {
         path: 'not-found',
