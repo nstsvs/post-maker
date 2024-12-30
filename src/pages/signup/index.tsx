@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Signup } from '@/widgets';
+import styles from '../auth.module.css';
 
 export const SignUpPage = () => {
   return (
-    <>
-      <h1>Sign Up</h1>
+    <div className={styles.authWrapper}>
+      <h1>Регистрация</h1>
       <Signup />
-      <p>Already have an account? Go to <Link to={'/login'}>Log in</Link>
+      <p className={styles.authText}>
+        Уже есть аккаунт? <Link className={styles.authLink} to={'/login'}>Войти</Link>
       </p>
-    </>
+    </div>
   );
 };

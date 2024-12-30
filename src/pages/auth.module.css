@@ -1,0 +1,18 @@
+.authWrapper {
+    margin: auto;
+}
+
+.authText {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.authLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.authLink:hover {
+    text-decoration: underline;
+}

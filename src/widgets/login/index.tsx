@@ -30,7 +30,7 @@ export const Login = () => {
   return (
     <>
       <Form
-        title="Log in"
+        title="Войти"
         handleClick={handleLogin}
       />
       {error && <p style={{color: 'red'}}>{error}</p>}

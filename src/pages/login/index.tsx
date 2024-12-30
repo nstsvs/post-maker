@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Login } from '@/widgets'
+import { Login } from '@/widgets';
+import styles from '../auth.module.css';
 
 export const LoginPage = () => {
   return (
-    <div>
-      <h1>Login</h1>
+    <div className={styles.authWrapper}>
+      <h1>Вход</h1>
       <Login />
-      <p>Or <Link to={'/signup'}>Create new account</Link></p>
+      <p className={styles.authText}>
+        Нет аккаунта? <Link className={styles.authLink} to={'/signup'}>Создать</Link>
+      </p>
     </div>
   );
 };

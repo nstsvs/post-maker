@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form } from '@widgets/form';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -9,6 +9,7 @@ import { auth } from '@/firebase';
 export const Signup = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState<string | null>(null);
 
   const handleSignUp = async (email: string, password: string) => {
     try {
@@ -20,14 +21,18 @@ export const Signup = () => {
       }));
       navigate('/');
     } catch (err) {
-      console.log(err);
+      setError(err);
+      console.error(err);
     }
   }
 
   return (
-    <Form
-      title="Sign up"
-      handleClick={handleSignUp}
-    />
+    <>
+      <Form
+        title="Создать новый аккаунт"
+        handleClick={handleSignUp}
+      />
+      {error && <p style={{color: 'red'}}>{error}</p>}
+    </>
   );
 };
