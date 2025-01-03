@@ -6,13 +6,25 @@ interface FormProps {
   handleClick: (email: string, password: string) => void;
 }
 
+interface FormData {
+  email: string;
+  password: string;
+}
+
 export const Form: React.FC<FormProps> = ({title, handleClick}) => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [formData, setFormData] = useState<FormData>({
+    email: '',
+    password: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  }
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    handleClick(email, password);
+    handleClick(formData.email, formData.password);
   }
 
   return (
@@ -20,20 +32,20 @@ export const Form: React.FC<FormProps> = ({title, handleClick}) => {
       <input
         name="email"
         type="email"
-        value={email}
+        value={formData.email}
         placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={handleChange}
         className={styles.input}
       />
       <input
         name="password"
         type="password"
-        value={password}
+        value={formData.password}
         placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={handleChange}
         className={styles.input}
       />
-      <button className={styles.formButton} onClick={() => handleClick(email, password)}>{title}</button>
+      <button type={'submit'} className={styles.formButton}>{title}</button>
     </form>
   );
 };
