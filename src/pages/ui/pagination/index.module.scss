@@ -1,0 +1,26 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 15px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: rgba(196, 77, 86);
+  }
+}
+
+.buttonActive {
+  box-shadow: 3px 3px 3px rgb(139, 0, 0);
+}
+
+
