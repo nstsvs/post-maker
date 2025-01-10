@@ -11,9 +11,9 @@ interface ValidationError {
 
 export const usePostList = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
-  const [totalPages, setTotalPages] = useState(0);
+  const [totalPages, setTotalPages] = useState<number>(0);
   const [limit] = useState<number>(10);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
