@@ -7,12 +7,12 @@ import { useUser } from '@/entities/auth/useUser';
 import { Pagination } from '@pages/ui/pagination';
 
 export const PostList = () => {
-  const { hasError, isLoading, page, posts, totalPages, changePage } = usePostList();
+  const { error, isLoading, page, posts, totalPages, changePage } = usePostList();
   const { isAuth } = useUser();
 
   return isAuth ? (
     <div className={styles.wrapper}>
-      {hasError && <p className={styles.warning}>Something went wrong</p>}
+      {error && <p className={styles.warning}>Something went wrong</p>}
       {isLoading ? <Skeleton count={10} style={{ height: '100px', marginBottom: '10px' }} /> :
         <ul>
           {posts.map(({ id, title, body }) => (
