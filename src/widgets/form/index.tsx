@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styles from './form.module.css'
+import { ChangeEvent, FC, FormEvent, useState } from 'react';
+import styles from './index.module.css'
 
 interface FormProps {
   title: string;
@@ -11,18 +11,18 @@ interface FormData {
   password: string;
 }
 
-export const Form: React.FC<FormProps> = ({title, handleClick}) => {
+export const Form: FC<FormProps> = ({ title, handleClick }) => {
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   }
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     handleClick(formData.email, formData.password);
   }
@@ -45,7 +45,7 @@ export const Form: React.FC<FormProps> = ({title, handleClick}) => {
         onChange={handleChange}
         className={styles.input}
       />
-      <button type={'submit'} className={styles.formButton}>{title}</button>
+      <button type='submit' className={styles.formButton}>{title}</button>
     </form>
   );
 };

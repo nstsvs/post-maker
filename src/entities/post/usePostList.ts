@@ -9,13 +9,23 @@ interface ValidationError {
   errors: Record<string, string[]>
 }
 
-export const usePostList = () => {
+interface PostListHookResult {
+  posts: IPost[];
+  totalPages: number;
+  page: number;
+  limit: number;
+  isLoading: boolean;
+  error: string | '';
+  changePage: (page: number) => void;
+}
+
+export const usePostList = (): PostListHookResult => {
   const [posts, setPosts] = useState<IPost[]>([]);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [limit] = useState<number>(10);
   const [page, setPage] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
 
   const changePage = (page: number) => {
     setPage(page)
@@ -23,8 +33,6 @@ export const usePostList = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    setError(null);
-
     const fetchPosts = async () => {
       try {
         const resp = await api.get<IPost[]>('/posts',

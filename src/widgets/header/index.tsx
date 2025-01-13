@@ -1,11 +1,11 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import styles from './header.module.css';
+import styles from './index.module.css';
 import Logo from '@shared/assets/images/logo.svg'
 import { removeUser } from '@/store/slices/userSlice';
 import { useAppDispatch } from '@/entities/reduxHooks';
 import { useUser } from '@/entities/auth/useUser';
+import { ROUTES } from '@shared/consts/routes';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -21,7 +21,7 @@ export const Header = () => {
               [styles.navigationItemActive]: isActive
             })
           }
-          to='/post-list'
+          to={ROUTES.POST_LIST}
         >Главная</NavLink>
         { isAuth ?
           <button
@@ -34,7 +34,7 @@ export const Header = () => {
                 [styles.navigationItemActive]: isActive
               })
             }
-            to='/login'
+            to={ROUTES.LOGIN}
           >Войти</NavLink>
         }
       </nav>

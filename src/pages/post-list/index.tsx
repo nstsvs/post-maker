@@ -1,4 +1,4 @@
-import styles from './post-list.module.css';
+import styles from './index.module.css';
 import { usePostList } from '@/entities/post/usePostList';
 import { Link, Navigate } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';

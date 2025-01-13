@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form } from '@widgets/form';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useAppDispatch } from '@/entities/reduxHooks';
 import { setUser } from '@/store/slices/userSlice';
 import { auth } from '@/firebase';
+import { ROUTES } from '@shared/consts/routes';
 
 export const Signup = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
 
   const handleSignUp = async (email: string, password: string) => {
     try {
@@ -19,7 +20,7 @@ export const Signup = () => {
         id: user.uid,
         token: user.refreshToken
       }));
-      navigate('/');
+      navigate(ROUTES.HOME);
     } catch (err) {
       setError(err);
       console.error(err);

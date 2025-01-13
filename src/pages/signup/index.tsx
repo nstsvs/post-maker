@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Signup } from '@/widgets';
 import styles from '../auth.module.css';
+import { ROUTES } from '@shared/consts/routes';
 
 export const SignUpPage = () => {
   return (
@@ -9,7 +9,7 @@ export const SignUpPage = () => {
       <h1>Регистрация</h1>
       <Signup />
       <p className={styles.authText}>
-        Уже есть аккаунт? <Link className={styles.authLink} to={'/login'}>Войти</Link>
+        Уже есть аккаунт? <Link className={styles.authLink} to={ROUTES.LOGIN}>Войти</Link>
       </p>
     </div>
   );
