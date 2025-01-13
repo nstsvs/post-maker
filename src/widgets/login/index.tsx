@@ -10,11 +10,11 @@ import { ROUTES } from '@shared/consts/routes';
 export const Login = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
 
   const handleLogin = async (email: string, password: string) => {
     try {
-      setError(null);
+      setError('');
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       dispatch(setUser({
         email: user.email,

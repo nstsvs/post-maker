@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import Logo from '@shared/assets/images/logo.svg'
 import { removeUser } from '@/store/slices/userSlice';
 import { useAppDispatch } from '@/entities/reduxHooks';

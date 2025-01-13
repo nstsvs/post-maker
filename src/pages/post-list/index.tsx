@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import { usePostList } from '@/entities/post/usePostList';
 import { Link, Navigate } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
@@ -13,7 +13,7 @@ export const PostList = () => {
   return isAuth ? (
     <div className={styles.wrapper}>
       {error && <p className={styles.warning}>Something went wrong</p>}
-      {isLoading ? <Skeleton count={10} style={{ height: '100px', marginBottom: '10px' }} /> :
+      {isLoading ? <Skeleton count={10} className={styles.skeleton} /> :
         <ul>
           {posts.map(({ id, title, body }) => (
             <li className={styles.item} key={id}>

@@ -15,7 +15,7 @@ interface PostListHookResult {
   page: number;
   limit: number;
   isLoading: boolean;
-  error: string | '';
+  error: string;
   changePage: (page: number) => void;
 }
 
