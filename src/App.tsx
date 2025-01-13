@@ -1,37 +1,41 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { NotFound, PostList, PostPage } from './pages';
-import { LoginPage } from '@pages/login';
-import { Layout } from '@widgets/Layout';
+import { NotFound, PostList, PostPage, SignUpPage, LoginPage } from './pages';
+import { Layout } from '@widgets/layout';
+import { ROUTES } from '@shared/consts/routes';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: ROUTES.HOME,
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <Navigate to="/post-list" replace />
+        element: <Navigate to={ROUTES.POST_LIST} replace />
       },
       {
-        path: 'post-list',
+        path: ROUTES.POST_LIST,
         element: <PostList />
       },
       {
-        path: 'post-page/:id',
+        path: ROUTES.POST_PAGE_ID,
         element: <PostPage />
       },
       {
-        path: 'login',
+        path: ROUTES.LOGIN,
         element: <LoginPage />,
       },
       {
-        path: 'not-found',
+        path: ROUTES.SIGNUP,
+        element: <SignUpPage />,
+      },
+      {
+        path: ROUTES.NOT_FOUND,
         element: <NotFound />
       },
       {
         path: '*',
-        element: <Navigate to="/not-found" replace />
+        element: <Navigate to={ROUTES.NOT_FOUND} replace />
       }
     ]
   }

@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 280px;
+  max-width: 300px;
+}
+
+.formButton {
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.input {
+  min-height: 30px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}

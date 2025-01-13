@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Login } from '@/widgets';
+import { Signup } from '@/widgets';
 import styles from '@shared/styles/identity.module.scss';
 import { ROUTES } from '@shared/consts/routes';
 
-export const LoginPage = () => {
+export const SignUpPage = () => {
   return (
     <div className={styles.wrapper}>
-      <h1>Вход</h1>
-      <Login />
+      <h1>Регистрация</h1>
+      <Signup />
       <p className={styles.text}>
-        Нет аккаунта? <Link className={styles.link} to={ROUTES.SIGNUP}>Создать</Link>
+        Уже есть аккаунт? <Link className={styles.link} to={ROUTES.LOGIN}>Войти</Link>
       </p>
     </div>
   );
