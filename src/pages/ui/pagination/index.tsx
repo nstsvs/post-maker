@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { getPagesArray } from '@/entities/pagination/pages-count';
+import { getPagesArray } from '@/entities/pagination/pagesCount';
 import styles from './index.module.scss';
 import clsx from 'clsx';
 

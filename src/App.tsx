@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { NotFound, PostList, PostPage, SignUpPage, LoginPage } from './pages';
-import { Layout } from '@widgets/Layout';
+import { Layout } from '@widgets/layout';
 import { ROUTES } from '@shared/consts/routes';
 
 export const router = createBrowserRouter([

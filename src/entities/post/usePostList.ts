@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { IPost } from '../post/types';
 import api from '../post/api/baseUrl';
 import axios from 'axios';
-import { getPageCount } from '@/entities/pagination/pages-count';
+import { getPageCount } from '@/entities/pagination/pagesCount';
 
 interface ValidationError {
   message: string;
