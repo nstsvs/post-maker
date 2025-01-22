@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Logo className={styles.logo} alt="Логотип" />
+      <Logo className={styles.logo} title="Логотип" />
       <nav className={styles.navigation}>
         <NavLink
           className={({ isActive }) =>

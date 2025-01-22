@@ -22,7 +22,7 @@ export const Signup = () => {
       }));
       navigate(ROUTES.HOME);
     } catch (err) {
-      setError(err);
+      setError(String(err));
       console.error(err);
     }
   }
