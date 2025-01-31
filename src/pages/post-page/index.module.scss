@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 50px 20px 0 20px;
+}
+
+.status {
+  font-size: 24px;
+}
+
+.subtextWrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.subtext {
+  color: gray;
+  font-size: 12px;
+}

@@ -7,14 +7,15 @@ interface ValidationError {
   errors: Record<string, string[]>
 }
 
-interface Post {
+interface PostProps {
   id: number;
+  userId: number;
   title: string;
   body: string;
 }
 
 export const usePost = (id: string) => {
-  const [post, setPost] = useState<Post | null>(null);
+  const [post, setPost] = useState<PostProps | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
 
