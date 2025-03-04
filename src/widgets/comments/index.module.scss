@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.commentWrapper {
+  padding: 5px 10px 0 10px;
+}
+
+.header {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: grey;
+}
+
+li:last-child hr {
+  display: none;
+}
