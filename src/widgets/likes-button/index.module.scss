@@ -1,0 +1,20 @@
+.wrapper {
+  margin-top: 5px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(196, 77, 86);
+  }
+}
+
+.text {
+  padding: 5px;
+  font-size: 14px;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 50px 20px 0 20px;
+}
+
+.status {
+  font-size: 24px;
+}
+
+.subtextWrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.subtext {
+  color: gray;
+  font-size: 12px;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid gray;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: rgb(196, 77, 86);
+  }
+}

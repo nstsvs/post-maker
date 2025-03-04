@@ -17,7 +17,7 @@ export const PostList = () => {
         <ul>
           {posts.map(({ id, title, body }) => (
             <li className={styles.item} key={id}>
-              <Link className={styles.link} to={`/post-page/${id}`}>
+              <Link className={styles.link} to={`/posts/${id}`}>
                 <h2 className={styles.title}>
                   {id}. {title}
                 </h2>

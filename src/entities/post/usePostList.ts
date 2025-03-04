@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { IPost } from '../post/types';
-import api from '../post/api/baseUrl';
+import { api } from '../post/api/baseUrl';
 import axios from 'axios';
 import { getPageCount } from '@/entities/pagination/pagesCount';
 
