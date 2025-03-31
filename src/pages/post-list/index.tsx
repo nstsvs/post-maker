@@ -13,7 +13,7 @@ export const PostList = () => {
   return isAuth ? (
     <div className={styles.wrapper}>
       {error && <p className={styles.warning}>Something went wrong</p>}
-      {isLoading ? <Skeleton count={10} className={styles.skeleton} /> :
+      {isLoading ? <Skeleton count={6} className={styles.skeleton} /> :
         <ul>
           {posts.map(({ id, title, body }) => (
             <li className={styles.item} key={id}>

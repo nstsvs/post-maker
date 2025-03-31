@@ -1,6 +1,8 @@
 .wrapper {
-  padding: 0 40px;
+  padding: 0 10px;
   margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .item {
@@ -47,4 +49,10 @@
   49.99%{transform:scaleY(1)  rotate(135deg)}
   50%   {transform:scaleY(-1) rotate(0deg)}
   100%  {transform:scaleY(-1) rotate(-135deg)}
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0 40px;
+  }
 }
