@@ -1,12 +1,13 @@
 .paginationWrapper {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 5px;
+  margin-top: auto;
+  padding-bottom: 75px;
 }
 
 .button {
-  padding: 15px;
+  padding: 6px;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
   border-radius: 4px;
   cursor: pointer;
@@ -21,4 +22,14 @@
 
 .buttonActive {
   box-shadow: 3px 3px 3px rgb(139, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .paginationWrapper {
+    gap: 15px;
+  }
+
+  .button {
+    padding: 15px;
+  }
 }
